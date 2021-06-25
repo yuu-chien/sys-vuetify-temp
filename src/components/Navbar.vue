@@ -4,13 +4,10 @@
     <!-- 加上 app 的話可以固定（類似於 position:fixed） v-app-bar 在最上方 -->
     <!-- https://vuetifyjs.com/en/api/v-app-bar/#props -->
     <!-- 預設有陰影，若想達致扁平化設計（沒有陰影）：可以加上 flat -->
-    <v-toolbar app flat dark class="light-green darken-3">
+    <v-toolbar app flat dark class="blue-grey">
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
       <v-toolbar-title>Title</v-toolbar-title>
-
       <v-spacer></v-spacer>
-
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
