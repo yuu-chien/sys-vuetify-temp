@@ -3,7 +3,6 @@
   <!-- v-app 是應用程式根節點，直接替換預設的 Vue 入口 <div id="app"> -->
   <!-- v-main 是替換 mainHTML 元素應用程式的根節點內容 -->
   <v-app>
-    <Navbar />
     <v-main class="grey lighten-2">
       <router-view></router-view>
     </v-main>
@@ -11,13 +10,11 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar";
-
 export default {
   name: "App",
-  components: { Navbar },
+  components: {},
   data() {
-    return;
+    return {};
   },
 };
 </script>
