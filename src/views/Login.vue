@@ -9,10 +9,10 @@
         ></v-progress-linear>
       </template>
       <v-img
-        height="240"
-        src="https://images.unsplash.com/photo-1571149829199-33981870803f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+        height="200"
+        src="https://images.unsplash.com/photo-1526289925534-a8b94e699809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
       ></v-img>
-      <v-card-title>Welcome！</v-card-title>
+      <v-card-title>A 咖，Welcome！</v-card-title>
       <v-card-text>
         <v-form>
           <v-text-field label="Account" color="orange" required></v-text-field>
@@ -50,7 +50,6 @@ export default {
   methods: {
     reserve() {
       this.loading = true;
-
       setTimeout(() => (this.loading = false), 2000);
     },
   },
