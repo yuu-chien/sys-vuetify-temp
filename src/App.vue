@@ -3,7 +3,7 @@
   <!-- v-app 是應用程式根節點，直接替換預設的 Vue 入口 <div id="app"> -->
   <!-- v-main 是替換 mainHTML 元素應用程式的根節點內容 -->
   <v-app>
-    <v-main class="grey lighten-2">
+    <v-main class="grey lighten-3">
       <router-view></router-view>
     </v-main>
   </v-app>
