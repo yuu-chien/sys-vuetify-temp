@@ -1,18 +1,19 @@
 <template>
   <v-container>
-    <v-bottom-navigation
-      absolute
-      shift
-      color="orange"
-      class="p-0"
-      height="auto"
-    >
-      <v-btn v-for="(item, i) in items" :key="i" x-large color="white">
+    <router-view></router-view>
+    <v-bottom-navigation fixed shift color="orange" class="p-0" height="auto">
+      <v-btn
+        v-for="(item, i) in items"
+        :key="i"
+        :to="{ path: item.link }"
+        x-large
+        color="white"
+      >
         <span class="mt-1">{{ item.text }}</span>
         <v-icon>{{ item.icon }}</v-icon>
       </v-btn>
     </v-bottom-navigation>
-    <router-view></router-view>
+
     <!-- <v-card max-width="360">
       <v-list shaped>
         <v-list-item-group v-model="selectedItem" color="orange">
@@ -50,9 +51,13 @@ export default {
       dialog: false,
       selectedItem: 1,
       items: [
-        { text: "我要打卡", icon: "mdi-account-check" },
-        { text: "打卡紀錄", icon: "mdi-history" },
-        { text: "補登申請", icon: "mdi-book-plus-multiple-outline" },
+        { text: "我要打卡", icon: "mdi-account-check", link: "clock-in" },
+        { text: "打卡紀錄", icon: "mdi-history", link: "records" },
+        {
+          text: "補登申請",
+          icon: "mdi-book-plus-multiple-outline",
+          link: "mending",
+        },
         // { text: "補登審核", icon: "mdi-account-multiple-check-outline" },
         // { text: "人事查詢", icon: "mdi-key-link" },
       ],

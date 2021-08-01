@@ -1,18 +1,30 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Layout from '../views/layout/Layout.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home,
+    path: '',
+    name: 'layout',
+    component: Layout,
     children: [
       {
+        path: '/',
+        component: () => import('../views/layout/Home.vue'),
+      },
+      {
         path: 'clock-in',
-        component: () => import('../views/Clockin.vue'),
+        component: () => import('../views/layout/Clockin.vue'),
+      },
+      {
+        path: 'mending',
+        component: () => import('../views/layout/Mending.vue'),
+      },
+      {
+        path: 'records',
+        component: () => import('../views/layout/Records.vue'),
       }
     ]
   },
