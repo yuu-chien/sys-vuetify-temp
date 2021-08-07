@@ -6,6 +6,11 @@ Vue.use(VueRouter)
 
 const routes = [
 	{
+		// 如果找不到該網址的話重新導向至首頁
+		path: '*',
+		redirect: '/'
+	},
+	{
 		path: '',
 		name: 'layout',
 		component: Layout,
