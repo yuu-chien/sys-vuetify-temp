@@ -2,7 +2,7 @@
     <v-card outlined min-width="320" class="mx-auto rounded-lg">
         <v-card-title class="orange--text font-weight-bold">
             <v-icon color="orange" class="mr-3"> mdi-account-check </v-icon>
-            <div>Hello, <span>Hibbitts</span></div>
+            <div>Punch in /out</div>
         </v-card-title>
         <v-list class="py-0">
             <v-list-item>

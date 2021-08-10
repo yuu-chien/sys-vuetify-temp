@@ -1,23 +1,5 @@
 <template>
     <v-container>
-        <!-- <v-bottom-navigation
-      app
-      shift
-      :value="currentColor"
-      color="orange"
-      class="pa-0"
-    >
-      <v-btn
-        v-for="(item, i) in items"
-        :key="i"
-        :to="{ path: item.link }"
-        x-large
-        color="white"
-      >
-        <span class="mt-1">{{ item.text }}</span>
-        <v-icon>{{ item.icon }}</v-icon>
-      </v-btn>
-    </v-bottom-navigation> -->
         <div>
             <v-icon class="my-2" @click.stop="drawer = !drawer"
                 >mdi-backburger</v-icon
