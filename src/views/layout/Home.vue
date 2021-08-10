@@ -1,33 +1,10 @@
 <template>
     <div>
-        <!-- <v-card outlined min-width="320" class="mx-auto rounded-lg">
-      <v-card-title class="orange--text font-weight-bold">
-        <v-icon color="orange" class="mr-3"> mdi-run-fast </v-icon>
-        <div>Let's Start！<span>吳小熊</span></div>
-      </v-card-title>
-      <v-card-text>
-        <v-item-group>
-          <v-container>
-            <v-row>
-              <v-col cols="6" v-for="(item, i) in items" :key="i">
-                <v-btn
-                  rounded
-                  outlined
-                  width="100%"
-                  color="green darken-1"
-                  class="white--text"
-                  :to="{ path: item.link }"
-                >
-                  <v-icon left>{{ item.icon }}</v-icon>
-                  <span>{{ item.text }}</span></v-btn
-                >
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-item-group>
-      </v-card-text>
-    </v-card> -->
-
+        <v-card outlined min-width="320" class="mx-auto mt-2 rounded-lg">
+            <v-card-title class="green--text font-weight-bold"
+                >Hello,<span> Hibbitts</span>
+            </v-card-title>
+        </v-card>
         <v-card outlined min-width="320" class="mx-auto mt-2 rounded-lg">
             <v-card-title class="orange--text font-weight-bold"
                 >No Punching Dates
@@ -59,18 +36,13 @@
         <v-dialog v-model="dialog" persistent max-width="360">
             <v-card>
                 <v-card-title class="text-h5 green--text font-weight-bold"
-                    >溫馨提醒</v-card-title
+                    >Reminder</v-card-title
                 >
-                <v-card-text>
-                    <ul>
-                        <li>您有 N 筆未打卡紀錄</li>
-                        <li>您有 N 筆補登審核未處理</li>
-                    </ul>
-                </v-card-text>
+                <v-card-text> There are 3 days no punching. </v-card-text>
                 <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn color="orange" text @click="dialog = false"
-                        >知道了</v-btn
+                        >OK</v-btn
                     >
                 </v-card-actions>
             </v-card>
@@ -83,24 +55,6 @@ export default {
     data() {
         return {
             dialog: false,
-            items: [
-                {
-                    text: '我要打卡',
-                    icon: 'mdi-account-check',
-                    link: 'clock-in',
-                },
-                { text: '打卡紀錄', icon: 'mdi-history', link: 'records' },
-                {
-                    text: '補登申請',
-                    icon: 'mdi-forum-outline',
-                    link: 'mending',
-                },
-                {
-                    text: '補登審核',
-                    icon: 'mdi-account-multiple-plus-outline',
-                    link: 'examine',
-                },
-            ],
         }
     },
 }
