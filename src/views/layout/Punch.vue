@@ -10,9 +10,11 @@
                     <v-list-item-title class="mb-0 font-weight-bold"
                         >Time</v-list-item-title
                     >
-                    <v-list-item-subtitle class="pt-2 grey--text"
-                        >YYYY / MM / DD / HH : MM</v-list-item-subtitle
-                    >
+                    <v-list-item-subtitle class="pt-2 grey--text">
+                        <span>{{ nowTimes.year }}</span> /
+                        <span>{{ nowTimes.month }}</span> /
+                        <span>{{ nowTimes.date }}</span> / HH : MM
+                    </v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
             <v-list-item>
@@ -58,7 +60,8 @@
                         Punch Now
                     </v-btn>
                 </template>
-                <template v-slot:default="dialog">
+                <!-- v-slot:default="dialog" -->
+                <template>
                     <v-card>
                         <v-card-title
                             class="text-h5 green--text font-weight-bold"
@@ -66,10 +69,7 @@
                         >
                         <v-card-actions>
                             <v-spacer></v-spacer>
-                            <v-btn
-                                color="orange"
-                                text
-                                @click="dialog.value = false"
+                            <v-btn color="orange" text @click="close"
                                 >Have a nice day</v-btn
                             >
                         </v-card-actions>
@@ -85,8 +85,28 @@
 export default {
     data() {
         return {
+            dialog: true,
             rules: [(v) => (v && v.length <= 20) || 'Max 20 characters'],
+            nowTimes: {},
         }
+    },
+    methods: {
+        getTime() {
+            this.nowTimes = {
+                year: new Date().getFullYear(),
+                month: new Date().getMonth() + 1,
+                date: new Date().getDate(),
+            }
+        },
+        close() {
+            this.dialog = false
+            this.$router.push({
+                path: '/',
+            })
+        },
+    },
+    created() {
+        this.getTime()
     },
 }
 </script>
