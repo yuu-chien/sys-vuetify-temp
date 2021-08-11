@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Layout from '../views/layout/Layout.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Layout from '../views/layout/Layout.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
 	{
@@ -12,7 +12,6 @@ const routes = [
 	},
 	{
 		path: '',
-		name: 'layout',
 		component: Layout,
 		children: [
 			{
@@ -46,10 +45,10 @@ const routes = [
 		name: 'Login',
 		component: () => import('../views/Login.vue')
 	}
-]
+];
 
 const router = new VueRouter({
 	routes
-})
+});
 
-export default router
+export default router;
