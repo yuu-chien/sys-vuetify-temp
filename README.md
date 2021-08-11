@@ -1,4 +1,6 @@
-# tests-for-vuetify
+# sys-vuetify-temp
+
+Punch in / out system UI for Vuetify practice.
 
 ## Project setup
 ```
