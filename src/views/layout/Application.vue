@@ -32,34 +32,46 @@
                     <v-list-item-title class="mb-0 font-weight-bold"
                         >Date</v-list-item-title
                     >
-                    <div>
-                        <v-menu
-                            :close-on-content-click="false"
-                            :nudge-right="40"
-                            transition="scale-transition"
-                            offset-y
-                        >
-                            <template v-slot:activator="{ on, attrs }">
-                                <v-text-field
-                                    readonly
-                                    hide-details="auto"
-                                    v-model="date"
-                                    label=""
-                                    v-bind="attrs"
-                                    v-on="on"
-                                    color="orange"
-                                    class="mt-0"
-                                ></v-text-field>
-                            </template>
-                            <v-date-picker
-                                color="orange"
+                    <v-menu
+                        :close-on-content-click="false"
+                        :nudge-right="40"
+                        transition="scale-transition"
+                        offset-y
+                        max-width="320"
+                    >
+                        <template v-slot:activator="{ on, attrs }">
+                            <v-text-field
+                                readonly
+                                hide-details="auto"
                                 v-model="date"
-                            ></v-date-picker>
-                        </v-menu>
-                    </div>
+                                label=""
+                                v-bind="attrs"
+                                v-on="on"
+                                color="orange"
+                                class="mt-0"
+                            ></v-text-field>
+                        </template>
+                        <v-date-picker
+                            color="orange"
+                            v-model="date"
+                            width="320"
+                        ></v-date-picker>
+                    </v-menu>
                 </v-list-item-content>
             </v-list-item>
-
+            <v-list-item>
+                <v-list-item-content>
+                    <v-list-item-title class="mb-0 font-weight-bold"
+                        >Time</v-list-item-title
+                    >
+                    <v-time-picker
+                        ampm-in-title
+                        format="ampm"
+                        color="orange"
+                        class="mt-3"
+                    ></v-time-picker>
+                </v-list-item-content>
+            </v-list-item>
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title class="mb-0 font-weight-bold"
