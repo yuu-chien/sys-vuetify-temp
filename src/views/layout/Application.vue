@@ -142,5 +142,5 @@ export default {
             .substr(0, 10),
         rules: [(v) => (v && v.length <= 20) || 'Max 20 characters'],
     }),
-}
+};
 </script>

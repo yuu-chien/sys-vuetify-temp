@@ -88,7 +88,7 @@ export default {
             dialog: true,
             rules: [(v) => (v && v.length <= 20) || 'Max 20 characters'],
             nowTimes: {},
-        }
+        };
     },
     methods: {
         getTime() {
@@ -96,17 +96,17 @@ export default {
                 year: new Date().getFullYear(),
                 month: new Date().getMonth() + 1,
                 date: new Date().getDate(),
-            }
+            };
         },
         close() {
-            this.dialog = false
+            this.dialog = false;
             this.$router.push({
                 path: '/',
-            })
+            });
         },
     },
     created() {
-        this.getTime()
+        this.getTime();
     },
-}
+};
 </script>

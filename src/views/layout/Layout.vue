@@ -63,7 +63,7 @@ export default {
                     link: 'login',
                 },
             ],
-        }
+        };
     },
-}
+};
 </script>

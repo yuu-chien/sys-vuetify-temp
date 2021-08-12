@@ -78,7 +78,7 @@ export default {
     data() {
         return {
             records: ['Mon', 'Tue', 'Wen', 'Thu', 'Fri'],
-        }
+        };
     },
-}
+};
 </script>
