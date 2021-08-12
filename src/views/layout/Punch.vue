@@ -12,8 +12,11 @@
                     >
                     <v-list-item-subtitle class="pt-2 grey--text">
                         <span>{{ nowTimes.year }}</span> /
-                        <span>{{ nowTimes.month }}</span> /
-                        <span>{{ nowTimes.date }}</span> / HH : MM
+                        <span> {{ nowTimes.month }}</span> /
+                        <span> {{ nowTimes.date }}</span> /
+                        <span>{{ nowTimes.hour }}</span
+                        >:
+                        <span>{{ nowTimes.min }}</span>
                     </v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
@@ -92,11 +95,15 @@ export default {
     },
     methods: {
         getTime() {
-            this.nowTimes = {
-                year: new Date().getFullYear(),
-                month: new Date().getMonth() + 1,
-                date: new Date().getDate(),
-            };
+            setInterval(() => {
+                this.nowTimes = {
+                    year: new Date().getFullYear(),
+                    month: new Date().getMonth() + 1,
+                    date: new Date().getDate(),
+                    hour: new Date().getHours(),
+                    min: new Date().getMinutes(),
+                };
+            }, 5000);
         },
         close() {
             this.dialog = false;
